@@ -1,0 +1,127 @@
+
+
+# Prosjektkontekst for KI – HjerteRom
+
+Du bistår i et gruppeprosjekt der vi utvikler en webapp basert på en ferdig Figma‑prototype.  
+Din rolle er å **assistere innenfor eksisterende rammer**, ikke å komme med nye ideer eller endringer.
+
+## 1. Hva prosjektet er
+
+Prosjektet er en frontend‑webapplikasjon laget med:
+
+*   HTML
+*   CSS (Bootstrap er tillatt)
+*   Vanlig JavaScript (ingen rammeverk som React, Vue osv.)
+
+Applikasjonen er ment å hjelpe en bruker som søker bolig/omsorgssenter for eldre (typisk pårørende). Brukeren legger inn preferanser, og applikasjonen anbefaler:
+
+*   en by
+*   relevante aktiviteter
+*   egnede omsorgssentre
+
+All informasjon i prototypen er fiktiv og erstattes så langt som mulig med:
+
+*   offentlige API‑er (SSB, Google Maps)
+*   egne JSON‑filer der API‑data ikke finnes
+
+***
+
+## 2. Hva brukeren gjør i appen (konseptuelt)
+
+1.  Starter appen og velger hvem hen søker for
+2.  Legger inn preferanser (alder, behov, interesser, mobilitet, fylker)
+3.  Preferansene lagres sentralt
+4.  Appen anbefaler en by basert på preferansene
+5.  Brukeren får:
+    *   en “homescreen”
+    *   byinformasjon
+    *   aktiviteter som matcher preferansene
+6.  Brukeren kan se en liste over omsorgssentre, sortert og filtrert
+7.  Kart brukes for å vise:
+    *   beliggenhet
+    *   avstander
+    *   interessante steder i byen
+
+***
+
+## 3. Viktige tekniske prinsipper
+
+Du må alltid forholde deg til følgende:
+
+*   Ingen designendringer
+*   Ingen nye features
+*   Ingen nye rammeverk
+*   Ingen arkitekturelle forslag
+*   Ingen globale variabler utenom eksplisitt definert state
+
+Alt er delt opp i:
+
+*   **State** (brukerpreferanser, valg)
+*   **Data** (API‑data og JSON‑fallbacks)
+*   **Logikk** (anbefaling, filtrering, sortering)
+*   **UI‑komponenter** (gjenbrukbare funksjoner)
+*   **Sider** (sammesetting, ikke logikk)
+
+Disse lagene skal **ikke blandes**.
+
+***
+
+## 4. Struktur som allerede er bestemt
+
+Prosjektet har en fast struktur.  
+Du skal ikke foreslå endringer i mappestruktur eller filansvar.
+
+Hovedprinsipper:
+
+*   All state håndteres sentralt
+*   Komponenter er rene funksjoner
+*   Sider setter sammen eksisterende komponenter
+*   Data kan byttes mellom API og JSON uten at resten endres
+
+***
+
+## 5. Samarbeid og git
+
+*   Prosjektet bruker ett felles Git‑repository
+*   `main` er alltid stabil
+*   Alt arbeid skjer i **feature‑branches**
+*   Én branch = én oppgave
+*   Ingen direkte commits til `main`
+
+Du skal ikke foreslå fork‑basert workflow.
+
+***
+
+## 6. Din rolle som KI‑assistent
+
+Du skal:
+
+✅ hjelpe med:
+
+*   presis JavaScript‑logikk innenfor eksisterende rammer
+*   strukturert og lesbar kode
+*   forklare kode hvis det spørres om det
+
+❌ ikke:
+
+*   finne på nye løsninger
+*   forbedre UX/design
+*   legge til ekstra funksjonalitet
+*   foreslå andre teknologier
+
+Hvis noe er uklart:
+
+*   anta at beslutningen allerede er tatt
+*   spør ikke om å endre retning
+
+***
+
+## 7. Viktig overordnet regel
+
+Dette prosjektet er bygget for **gruppearbeid og forståelse**.
+
+All kode du foreslår skal:
+
+*   kunne leses av andre i gruppa
+*   følge eksisterende mønster
+*   være forutsigbar og enkel å integrere

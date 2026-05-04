@@ -1,0 +1,268 @@
+
+1.  **Prinsipp for arbeidsdeling i et “kronologisk” prosjekt**
+2.  **Konkret rolle- og oppgavefordeling (4 personer)**
+3.  **Tidsplan uke for uke frem mot 27. mai**
+4.  **Hva som kan delegeres allerede nå**
+5.  **Copilot‑prompt per rolle** (slik at alle jobber likt og trygt)
+
+
+
+## 1. Grunnprinsipp: hvordan alle kan jobbe fra start
+
+Selv om brukerreisen er lineær (onboarding → anbefaling → visning), kan utvikling deles ved å skille:
+
+*   **Data (hva finnes?)**
+*   **State (hvordan lagres valg?)**
+*   **Logikk (hvordan avgjøres anbefalinger?)**
+*   **Visning (hvordan settes ting sammen på sider?)**
+
+👉 Disse kan utvikles **parallelt**, så lenge dere er enige om:
+
+*   struktur
+*   ansvar
+*   grenser mellom modulene
+
+***
+
+
+
+## 2. Foreslått rolleinndeling (4 personer)
+
+
+### 👤 Person A – *Tech lead / integrasjon* (Petter)
+
+**Ansvar:**
+
+*   repo‑struktur
+*   `main`‑branch
+*   merges
+*   vanskelige deler (state + anbefaling)
+
+**Jobber mest med:**
+
+*   `state.js`
+*   `recommendation.js`
+*   overblikk og sammenkobling
+
+***
+
+### 👤 Person B – *Data & API*
+
+**Ansvar:**
+
+*   finne / strukturere data
+*   lage JSON‑fallbacks
+*   sørge for at alt har samme format
+
+**Jobber mest med:**
+
+*   `/data/*.json`
+*   `dataService.js`
+*   SSB / Google Maps data (struktur, ikke visning)
+
+***
+
+### 👤 Person C – *UI‑komponenter*
+
+**Ansvar:**
+
+*   gjenbrukbare JS‑komponenter
+*   kort, lister, filtre
+*   ingen side‑spesifikk logikk
+
+**Jobber mest med:**
+
+*   `/js/components/*`
+*   Bootstrap‑bruk
+*   konsistente inputs/outputs
+
+***
+
+### 👤 Person D – *Side‑sammensetting*
+
+**Ansvar:**
+
+*   HTML‑sidene
+*   koble state + komponenter
+*   sørge for at riktig info vises riktig sted
+
+**Jobber mest med:**
+
+*   `/pages/*.html`
+*   `app.js`
+*   navigasjon / flyt
+
+***
+
+
+
+## 3. Hva kan delegeres allerede nå (dag 1)
+
+Selv før onboarding “funker”:
+
+### Kan gjøres parallelt umiddelbart
+
+*   Repo + README ✅ (Petter) - gjort
+*   Datamodell skrevet i tekst ✅ (deg + Person B)
+*   JSON‑datastruktur ✅ (Person B)
+*   Komponent‑API (hva tar inn / hva returnerer) ✅ (Person C)
+*   Tomme HTML‑sider med riktig struktur ✅ (Person D) - gjort
+
+👉 Ingen trenger ferdige side-data for å starte.
+
+***
+
+
+
+## 4. Uke‑for‑uke‑plan frem mot 27. mai
+
+Jeg antar start nå og ca. 3 uker tilgjengelig.
+
+
+
+### 🗓️ Uke 1 (nå → ca. 11. mai)
+
+**Mål:** Fundament ferdig
+
+**Alle**
+
+*   Klone repo
+*   Sette opp branches
+*   Lese README
+
+**Petter**
+
+*   Fryse datamodell
+*   Lage branch: `feature/state`
+*   Definere hvordan preferanser lagres og leses
+
+**Person B** - spør chat
+
+*   Lage JSON‑filer med:
+    *   byer
+    *   aktiviteter
+    *   omsorgssentre
+*   Enighet om format
+
+**Person C** - spør chat
+
+*   Bestemme component‑mønster
+*   Lage grunnkomponenter (uten data)
+*   Dokumentere forventet input
+
+    -- altså lage html + css for de mest brukte komponentene, men skal ikke inneholde data --
+
+**Person D**
+
+*   Lage HTML‑skjelett for alle sider
+*   Ingen JS‑logikk ennå
+
+✅ **Slutt uke 1:**  
+Alle kan peke på *sitt* ansvar i repoet.
+
+***
+
+
+
+### 🗓️ Uke 2 (ca. 12. → 18. mai)
+
+**Mål:** Preferanser → anbefaling → visning
+
+**Deg**
+
+*   Anbefalingslogikk (byvalg)
+*   Merge state + data
+
+**Person B**
+
+*   Koble dataservice til JSON / API
+*   Mocke manglende data
+
+**Person C**
+
+*   Ferdigstille kort, lister, filtre
+*   Ingen side‑logikk
+
+**Person D**
+
+*   Koble onboarding → home
+*   Bruke komponenter til å vise data
+
+✅ **Slutt uke 2:**  
+En bruker kan gå fra start → se anbefaling.
+
+***
+
+
+
+### 🗓️ Uke 3 (ca. 19. → 26. mai)
+
+**Mål:** Kart, filter, finpuss
+
+**Deg**
+
+*   Overvåke merges
+*   Rydde i struktur
+
+**Person B**
+
+*   Google Maps‑data (avstand / punkter)
+
+**Person C**
+
+*   Filtrering (sortering, rating)
+
+**Person D**
+
+*   Sette sammen siste sider
+*   Sammenligning
+
+✅ **26. mai:** funksjonelt produkt  
+✅ **27. mai:** levering
+
+***
+
+## 5. Copilot‑prompt per rolle (viktig del)
+
+Alle bør **lime dette inn i Copilot Chat** før de starter, tilpasset sin rolle.
+Dette reduserer risiko for at Copilot “løper løpsk”.
+
+***
+
+### 🔹 Person A – State & anbefaling
+
+    Du er med på et gruppeprosjekt i ren HTML, CSS og vanlig JavaScript.
+    Ikke foreslå nye features eller designendringer.
+    Følg eksisterende filstruktur og datamodell.
+    All logikk skal være modulær, lesbar og gjenbrukbar.
+    Avslå løsninger som endrer arkitektur eller legger til rammeverk.
+
+***
+
+### 🔹 Person B – Data & API
+
+    Du skal kun jobbe med datastruktur, API-responser og lokale JSON-filer.
+    Ikke lag UI, ikke foreslå visuelle komponenter.
+    All data skal returneres i et konsistent format som kan byttes mellom API og JSON.
+    Ikke bind data til spesifikke sider.
+
+***
+
+### 🔹 Person C – Komponenter
+
+    Du lager gjenbrukbare JavaScript-komponenter.
+    Ikke bruk globale variabler.
+    Komponenter skal ikke kjenne til sider eller state direkte.
+    Bruk rene funksjoner med tydelige parametere.
+    Ikke legg inn hardkodet data.
+
+***
+
+### 🔹 Person D – Sider & flyt
+
+    Du bygger HTML-sider og kobler sammen eksisterende state og komponenter.
+    Ikke implementer forretningslogikk.
+    Ikke dupliser kode fra andre moduler.
+    Bruk komponenter og state slik de er definert.
+
+***
