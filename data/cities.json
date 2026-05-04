@@ -1,0 +1,67 @@
+[
+  {
+    "id": "bergen",
+    "name": "Bergen",
+    "county": "Vestland",
+    "description": "Fjordenes by med rikt kulturliv og gode helsetjenester.",
+    "population": 285900,
+    "coordinates": { "lat": 60.3913, "lng": 5.3221 },
+    "mobility": ["god", "begrenset", "rullestol"],
+    "tags": ["natur", "kultur", "sosialt"],
+    "healthScore": 8,
+    "activitiesScore": 9,
+    "careScore": 8
+  },
+  {
+    "id": "stavanger",
+    "name": "Stavanger",
+    "county": "Rogaland",
+    "description": "Levende by med sterke helsefasiliteter og flott natur.",
+    "population": 145000,
+    "coordinates": { "lat": 58.9700, "lng": 5.7331 },
+    "mobility": ["god", "begrenset"],
+    "tags": ["natur", "sosialt"],
+    "healthScore": 9,
+    "activitiesScore": 7,
+    "careScore": 9
+  },
+  {
+    "id": "trondheim",
+    "name": "Trondheim",
+    "county": "Trøndelag",
+    "description": "Universitetsby med fremragende medisinsk kompetanse.",
+    "population": 207000,
+    "coordinates": { "lat": 63.4305, "lng": 10.3951 },
+    "mobility": ["god", "begrenset", "rullestol"],
+    "tags": ["kultur", "sosialt"],
+    "healthScore": 10,
+    "activitiesScore": 8,
+    "careScore": 9
+  },
+  {
+    "id": "oslo",
+    "name": "Oslo",
+    "county": "Oslo",
+    "description": "Hovedstaden med landets beste spesialisthelsetjenester.",
+    "population": 693500,
+    "coordinates": { "lat": 59.9139, "lng": 10.7522 },
+    "mobility": ["god", "begrenset", "rullestol"],
+    "tags": ["kultur", "sosialt"],
+    "healthScore": 10,
+    "activitiesScore": 10,
+    "careScore": 8
+  },
+  {
+    "id": "kristiansand",
+    "name": "Kristiansand",
+    "county": "Agder",
+    "description": "Sydlandsk by med godt klima og aktive fritidstilbud.",
+    "population": 112000,
+    "coordinates": { "lat": 58.1462, "lng": 7.9957 },
+    "mobility": ["god", "begrenset"],
+    "tags": ["natur", "sosialt"],
+    "healthScore": 7,
+    "activitiesScore": 8,
+    "careScore": 7
+  }
+]

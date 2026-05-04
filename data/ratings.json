@@ -1,0 +1,10 @@
+[
+  { "id": "cc001", "overall": 4.2, "staff": 4.5, "food": 4.0, "activities": 3.8, "cleanliness": 4.5, "reviewCount": 34 },
+  { "id": "cc002", "overall": 4.5, "staff": 4.7, "food": 4.3, "activities": 4.2, "cleanliness": 4.8, "reviewCount": 52 },
+  { "id": "cc003", "overall": 4.0, "staff": 4.2, "food": 3.9, "activities": 3.7, "cleanliness": 4.2, "reviewCount": 28 },
+  { "id": "cc004", "overall": 3.8, "staff": 4.0, "food": 3.7, "activities": 3.5, "cleanliness": 4.0, "reviewCount": 19 },
+  { "id": "cc005", "overall": 4.7, "staff": 4.8, "food": 4.6, "activities": 4.5, "cleanliness": 4.9, "reviewCount": 67 },
+  { "id": "cc006", "overall": 4.3, "staff": 4.4, "food": 4.1, "activities": 4.3, "cleanliness": 4.4, "reviewCount": 45 },
+  { "id": "cc007", "overall": 4.1, "staff": 4.3, "food": 4.0, "activities": 3.9, "cleanliness": 4.2, "reviewCount": 38 },
+  { "id": "cc008", "overall": 3.9, "staff": 4.1, "food": 3.8, "activities": 3.6, "cleanliness": 4.1, "reviewCount": 22 }
+]

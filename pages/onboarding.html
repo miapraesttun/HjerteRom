@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velkommen – HjerteRom</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hr-hero">
+    <div class="container text-center">
+      <i class="bi bi-heart-pulse-fill mb-3" style="font-size: 3rem;"></i>
+      <h1>HjerteRom</h1>
+      <p class="lead">
+        Finn det beste stedet for dine nærmeste – basert på behov, mobilitet og interesser.
+      </p>
+    </div>
+  </div>
+
+  <main>
+    <div class="container" style="max-width: 640px;">
+      <h2 class="hr-page-title text-center">Hvem gjelder dette?</h2>
+      <p class="hr-page-subtitle text-center">
+        Vi tilpasser anbefalingene etter hvem søket gjelder.
+      </p>
+
+      <div class="row g-3 mb-4">
+        <div class="col-6">
+          <button
+            id="btn-for-parent"
+            class="btn btn-outline-primary w-100 py-4 hr-type-btn"
+            data-value="foreldre"
+          >
+            <i class="bi bi-person-heart d-block mb-2" style="font-size: 2rem;"></i>
+            For foreldre / pårørende
+          </button>
+        </div>
+        <div class="col-6">
+          <button
+            id="btn-for-self"
+            class="btn btn-outline-primary w-100 py-4 hr-type-btn"
+            data-value="meg_selv"
+          >
+            <i class="bi bi-person-circle d-block mb-2" style="font-size: 2rem;"></i>
+            For meg selv
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button id="btn-continue" class="btn btn-primary btn-lg px-5" disabled>
+          Fortsett <i class="bi bi-arrow-right ms-2"></i>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 HjerteRom</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module">
+    import { setState } from "../js/state.js";
+
+    let selectedType = null;
+
+    document.querySelectorAll(".hr-type-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".hr-type-btn").forEach((b) => b.classList.remove("active", "btn-primary"));
+        btn.classList.add("active", "btn-primary");
+        selectedType = btn.dataset.value;
+        document.getElementById("btn-continue").disabled = false;
+      });
+    });
+
+    document.getElementById("btn-continue").addEventListener("click", () => {
+      if (selectedType) {
+        setState({ userType: selectedType });
+        window.location.href = "preferences.html";
+      }
+    });
+  </script>
+</body>
+</html>

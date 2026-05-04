@@ -1,0 +1,14 @@
+# Editor directories
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Google Maps API key (do NOT commit this file)
+config.js
+
+# Build / dependency artefacts (if added later)
+node_modules/
+dist/
