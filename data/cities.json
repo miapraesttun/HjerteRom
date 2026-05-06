@@ -1,1 +1,84 @@
-[]
+eksempel på mal for by/kommune 
+{
+  "municipalities": [
+    {
+      "id": "kommune_id",
+      "name": "",
+      "county": "",
+      "image_url": "assets/images/cities/navn.jpg",
+      "coordinates": {
+        "lat": 0.0,
+        "lng": 0.0
+      },
+      "ratings": {
+        "overall": 0,
+        "physical_health": 0,
+        "satisfaction": 0
+      },
+      "elderly_care": {
+        "politics": "",
+        "expansion_plans": "",
+        "survey_info": "",
+        "satisfaction_chart": {
+          "satisfied_pct": 0,
+          "dissatisfied_pct": 0
+        }
+      },
+      "public_transport": {
+        "recommendation": "",
+        "bus_service": "",
+        "taxi_service": "",
+        "train_lines": []
+      },
+      "categories": [
+        "Omsorgssentre",
+        "Sykehjem",
+        "Kulturtilbud",
+        "Helsetjenester"
+      ]
+    }
+  ]
+}
+
+
+Bergen (akkurat som i figma-designet: 
+[{
+  "municipalities": [
+    {
+      "id": "bergen",
+      "name": "Bergen sentrum",
+      "county": "Vestland",
+      "image_url": "assets/images/cities/bergen_sentrum.jpg",
+      "coordinates": {
+        "lat": 60.3913,
+        "lng": 5.3221
+      },
+      "ratings": {
+        "overall": 8,
+        "physical_health": 5,
+        "satisfaction": 7
+      },
+      "elderly_care": {
+        "politics": "Høyre/blå regjering",
+        "expansion_plans": "Det er planer om å bygge ca. 770 nye sykehjemshjemplasser frem mot 2035",
+        "survey_info": "En undersøkelse blant bergensere over 80 år (høsten 2024) viste en gjennomsnittlig livstilfredshet på 7,4 av 10",
+        "satisfaction_chart": {
+          "satisfied_pct": 74,
+          "dissatisfied_pct": 26
+        }
+      },
+      "public_transport": {
+        "recommendation": "Bør bo i nærheten av bybane",
+        "bus_service": "middels",
+        "taxi_service": "bra",
+        "train_lines": ["Voss", "Geilo", "Drammen", "Oslo"]
+      },
+      "categories": [
+        "Omsorgssentre",
+        "Sykehjem",
+        "Kulturtilbud",
+        "Helsetjenester"
+      ]
+    }
+  ]
+}
