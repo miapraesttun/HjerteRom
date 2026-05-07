@@ -36,11 +36,7 @@ eksempel på mal for by/kommune
         "Kulturtilbud",
         "Helsetjenester"
       ]
-    }
-  ]
-}
-{
-  "municipalities": [
+    },
     {
       "id": "oslo",
       "name": "Oslo sentrum",
