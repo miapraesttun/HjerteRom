@@ -59,3 +59,17 @@ export function FeatureCard({ title = "", description = "", icon = "" }) {
         </div>
     `;
 }
+
+
+export function CareCenterCard({ name = "", image = "" }) {
+    return `
+        <div class="card border-0 shadow-sm care-card h-100">
+
+            <img src="${image}" class="card-img-top care-image" alt="${name}" />
+
+            <div class="card-body">
+                <h6 class="fw-semibold mb-0">${name}</h6>
+            </div>
+        </div>
+    `;
+}

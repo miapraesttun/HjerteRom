@@ -59,3 +59,18 @@
 
     color: #2f4f2f;
 }
+
+.care-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.care-image {
+    height: 140px;
+    object-fit: cover;
+}
+
+.care-card h6 {
+    color: #2f4f2f;
+}
