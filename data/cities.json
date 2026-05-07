@@ -39,46 +39,217 @@ eksempel på mal for by/kommune
     }
   ]
 }
-
-
-Bergen (akkurat som i figma-designet: 
-[{
+{
   "municipalities": [
+    {
+      "id": "oslo",
+      "name": "Oslo sentrum",
+      "county": "Oslo",
+      "image_url": "assets/images/cities/oslo.jpg",
+      "coordinates": { "lat": 59.9139, "lng": 10.7522 },
+      "ratings": { "overall": 9, "physical_health": 7, "satisfaction": 8 },
+      "elderly_care": {
+        "politics": "Arbeiderpartiet/MDG/SV-byråd",
+        "expansion_plans": "Planlegger 500 nye omsorgsboliger med heldøgns pleie innen 2030.",
+        "survey_info": "Brukerundersøkelse 2024 viser høy tilfredshet med aktivitetstilbudet.",
+        "satisfaction_chart": { "satisfied_pct": 82, "dissatisfied_pct": 18 }
+      },
+      "public_transport": {
+        "recommendation": "T-bane og trikk gir unik tilgjengelighet.",
+        "bus_service": "veldig bra",
+        "taxi_service": "utmerket",
+        "train_lines": ["Drammenbanen", "Hovedbanen", "Østfoldbanen", "Gjøvikbanen"]
+      },
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
+    },
     {
       "id": "bergen",
       "name": "Bergen sentrum",
       "county": "Vestland",
-      "image_url": "assets/images/cities/bergen_sentrum.jpg",
-      "coordinates": {
-        "lat": 60.3913,
-        "lng": 5.3221
-      },
-      "ratings": {
-        "overall": 8,
-        "physical_health": 5,
-        "satisfaction": 7
-      },
+      "image_url": "assets/images/cities/bergen.jpg",
+      "coordinates": { "lat": 60.3913, "lng": 5.3221 },
+      "ratings": { "overall": 8, "physical_health": 5, "satisfaction": 7 },
       "elderly_care": {
         "politics": "Høyre/blå regjering",
-        "expansion_plans": "Det er planer om å bygge ca. 770 nye sykehjemshjemplasser frem mot 2035",
-        "survey_info": "En undersøkelse blant bergensere over 80 år (høsten 2024) viste en gjennomsnittlig livstilfredshet på 7,4 av 10",
-        "satisfaction_chart": {
-          "satisfied_pct": 74,
-          "dissatisfied_pct": 26
-        }
+        "expansion_plans": "Det er planer om å bygge ca. 770 nye sykehjemsplasser frem mot 2035.",
+        "survey_info": "Livstilfredshet blant eldre målt til 7,4 av 10 i 2024.",
+        "satisfaction_chart": { "satisfied_pct": 74, "dissatisfied_pct": 26 }
       },
       "public_transport": {
-        "recommendation": "Bør bo i nærheten av bybane",
+        "recommendation": "Bør bo i nærheten av bybane.",
+        "bus_service": "bra",
+        "taxi_service": "bra",
+        "train_lines": ["Bergensbanen"]
+      },
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
+    },
+    {
+      "id": "trondheim",
+      "name": "Trondheim",
+      "county": "Trøndelag",
+      "image_url": "assets/images/cities/trondheim.jpg",
+      "coordinates": { "lat": 63.4305, "lng": 10.3951 },
+      "ratings": { "overall": 8, "physical_health": 8, "satisfaction": 8 },
+      "elderly_care": {
+        "politics": "Arbeiderpartiet/Senterpartiet",
+        "expansion_plans": "Satsing på velferdsteknologi i alle nye omsorgsboliger.",
+        "survey_info": "Eldre i Trondheim rapporterer om svært gode turmuligheter.",
+        "satisfaction_chart": { "satisfied_pct": 79, "dissatisfied_pct": 21 }
+      },
+      "public_transport": {
+        "recommendation": "Metrobuss fungerer svært godt i bynære områder.",
+        "bus_service": "bra",
+        "taxi_service": "bra",
+        "train_lines": ["Dovrebanen", "Nordlandsbanen", "Rørosbanen"]
+      },
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
+    },
+    {
+      "id": "stavanger",
+      "name": "Stavanger",
+      "county": "Rogaland",
+      "image_url": "assets/images/cities/stavanger.jpg",
+      "coordinates": { "lat": 58.9700, "lng": 5.7331 },
+      "ratings": { "overall": 7, "physical_health": 6, "satisfaction": 8 },
+      "elderly_care": {
+        "politics": "Høyre/FrP",
+        "expansion_plans": "Utvidelse av eksisterende sentre med fokus på demensomsorg.",
+        "survey_info": "Høy score på mattilbud i kommunale sykehjem.",
+        "satisfaction_chart": { "satisfied_pct": 70, "dissatisfied_pct": 30 }
+      },
+      "public_transport": {
+        "recommendation": "Godt utbygd bussnett, men bilvennlig by.",
+        "bus_service": "bra",
+        "taxi_service": "svært bra",
+        "train_lines": ["Sørlandsbanen/Jærbanen"]
+      },
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
+    },
+    {
+      "id": "baerum",
+      "name": "Bærum",
+      "county": "Akershus",
+      "image_url": "assets/images/cities/baerum.jpg",
+      "coordinates": { "lat": 59.8911, "lng": 10.5266 },
+      "ratings": { "overall": 9, "physical_health": 6, "satisfaction": 9 },
+      "elderly_care": {
+        "politics": "Høyre",
+        "expansion_plans": "Mange private alternativer og moderne seniorleiligheter.",
+        "survey_info": "Toppskår på trygghet i hjemmet.",
+        "satisfaction_chart": { "satisfied_pct": 88, "dissatisfied_pct": 12 }
+      },
+      "public_transport": {
+        "recommendation": "Nærhet til togstasjoner (Lysaker/Sandvika) er en fordel.",
         "bus_service": "middels",
         "taxi_service": "bra",
-        "train_lines": ["Voss", "Geilo", "Drammen", "Oslo"]
+        "train_lines": ["Drammenbanen", "Askerbanen"]
       },
-      "categories": [
-        "Omsorgssentre",
-        "Sykehjem",
-        "Kulturtilbud",
-        "Helsetjenester"
-      ]
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
+    },
+    {
+      "id": "kristiansand",
+      "name": "Kristiansand",
+      "county": "Agder",
+      "image_url": "assets/images/cities/kristiansand.jpg",
+      "coordinates": { "lat": 58.1467, "lng": 7.9956 },
+      "ratings": { "overall": 7, "physical_health": 7, "satisfaction": 8 },
+      "elderly_care": {
+        "politics": "Senterpartiet/Høyre",
+        "expansion_plans": "Bygger ut 'Livsglede'-sertifiserte sykehjem.",
+        "survey_info": "Eldre trives godt med klima og sosialt fellesskap.",
+        "satisfaction_chart": { "satisfied_pct": 76, "dissatisfied_pct": 24 }
+      },
+      "public_transport": {
+        "recommendation": "Buss er hovedfremkomstmiddel.",
+        "bus_service": "bra",
+        "taxi_service": "bra",
+        "train_lines": ["Sørlandsbanen"]
+      },
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
+    },
+    {
+      "id": "drammen",
+      "name": "Drammen",
+      "county": "Buskerud",
+      "image_url": "assets/images/cities/drammen.jpg",
+      "coordinates": { "lat": 59.7441, "lng": 10.2045 },
+      "ratings": { "overall": 7, "physical_health": 6, "satisfaction": 6 },
+      "elderly_care": {
+        "politics": "Høyre/FrP",
+        "expansion_plans": "Nye konsepter for generasjonsmøter i omsorgsboliger.",
+        "survey_info": "Fokus på rehabilitering etter sykehusopphold.",
+        "satisfaction_chart": { "satisfied_pct": 65, "dissatisfied_pct": 35 }
+      },
+      "public_transport": {
+        "recommendation": "Sentralt knutepunkt for tog.",
+        "bus_service": "bra",
+        "taxi_service": "middels",
+        "train_lines": ["Drammenbanen", "Vestfoldbanen", "Sørlandsbanen"]
+      },
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
+    },
+    {
+      "id": "asker",
+      "name": "Asker",
+      "county": "Akershus",
+      "image_url": "assets/images/cities/asker.jpg",
+      "coordinates": { "lat": 59.8354, "lng": 10.4342 },
+      "ratings": { "overall": 8, "physical_health": 7, "satisfaction": 8 },
+      "elderly_care": {
+        "politics": "Høyre",
+        "expansion_plans": "Satsing på frivillighet og eldre-vennlig nabolagsutvikling.",
+        "survey_info": "Gode resultater på psykisk helse blant seniorer.",
+        "satisfaction_chart": { "satisfied_pct": 80, "dissatisfied_pct": 20 }
+      },
+      "public_transport": {
+        "recommendation": "Togforbindelse til Oslo er utmerket.",
+        "bus_service": "middels",
+        "taxi_service": "bra",
+        "train_lines": ["Drammenbanen", "Spikkestadbanen"]
+      },
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
+    },
+    {
+      "id": "lillestrom",
+      "name": "Lillestrøm",
+      "county": "Akershus",
+      "image_url": "assets/images/cities/lillestrom.jpg",
+      "coordinates": { "lat": 59.9560, "lng": 11.0492 },
+      "ratings": { "overall": 7, "physical_health": 5, "satisfaction": 7 },
+      "elderly_care": {
+        "politics": "Arbeiderpartiet",
+        "expansion_plans": "Modernisering av eldre boligmasse i sentrumsnære strøk.",
+        "survey_info": "Mye positiv tilbakemelding på nærhet til kulturhus.",
+        "satisfaction_chart": { "satisfied_pct": 72, "dissatisfied_pct": 28 }
+      },
+      "public_transport": {
+        "recommendation": "Sykkelvennlig by med flatt terreng.",
+        "bus_service": "bra",
+        "taxi_service": "middels",
+        "train_lines": ["Gardermobanen", "Hovedbanen", "Kongsvingerbanen"]
+      },
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
+    },
+    {
+      "id": "fredrikstad",
+      "name": "Fredrikstad",
+      "county": "Østfold",
+      "image_url": "assets/images/cities/fredrikstad.jpg",
+      "coordinates": { "lat": 59.2205, "lng": 10.9347 },
+      "ratings": { "overall": 7, "physical_health": 5, "satisfaction": 8 },
+      "elderly_care": {
+        "politics": "Høyre/FrP",
+        "expansion_plans": "Bygger nye helsehuset for å avlaste sykehjem.",
+        "survey_info": "Beboere setter stor pris på gratis byferge.",
+        "satisfaction_chart": { "satisfied_pct": 75, "dissatisfied_pct": 25 }
+      },
+      "public_transport": {
+        "recommendation": "Byfergen er et unikt og populært tilbud.",
+        "bus_service": "middels",
+        "taxi_service": "bra",
+        "train_lines": ["Østfoldbanen"]
+      },
+      "categories": ["Omsorgssentre", "Sykehjem", "Kulturtilbud", "Helsetjenester"]
     }
   ]
 }
