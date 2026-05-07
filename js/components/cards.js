@@ -36,3 +36,26 @@ export function GridCard({ title = "", icon = "" }) {
         </div>
     `;
 }
+
+export function FeatureCard({ title = "", description = "", icon = "" }) {
+    return `
+        <div class="card border-0 shadow-sm feature-card p-3 h-100">
+            <div class="d-flex align-items-start">
+
+                <div class="feature-icon me-3">
+                    <i class="bi ${icon}"></i>
+                </div>
+
+                <div class="flex-grow-1">
+                    <h6 class="fw-semibold mb-1">${title}</h6>
+                    <p class="text-muted small mb-2">${description}</p>
+                </div>
+
+                <div class="feature-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+            </div>
+        </div>
+    `;
+}

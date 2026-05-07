@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Test komponenter</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Din CSS -->
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+
+<body class="p-3">
+
+    <div id="app"></div>
+
+    <script type="module">
+        import { PreferenceCard, GridCard } from "../js/components/cards.js";
+
+        const app = document.getElementById("app");
+
+        app.innerHTML = `
+        ${PreferenceCard({
+            title: "Sosialt miljø",
+            description: "De trives med andre rundt seg",
+            icon: "bi-people"
+        })}
+
+        ${PreferenceCard({
+            title: "Mer privatliv",
+            description: "Setter pris på ro og eget rom",
+            icon: "bi-house"
+        })}
+
+        <div class="row mt-4">
+            <div class="col-6">
+            ${GridCard({ title: "Butikker i nærheten", icon: "bi-cart" })}
+            </div>
+            <div class="col-6">
+            ${GridCard({ title: "Natur og turer", icon: "bi-tree" })}
+            </div>
+        </div>
+        `;
+    </script>
+
+</body>
+</html>

@@ -27,3 +27,35 @@
     font-size: 22px;
     color: #2f4f2f;
 }
+
+.feature-card {
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #e6dec7;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f57c00;
+    font-size: 18px;
+}
+
+.feature-arrow {
+    width: 32px;
+    height: 32px;
+    background-color: #e6dec7;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #2f4f2f;
+}
