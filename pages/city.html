@@ -3,9 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>city – HjerteRom</title>
+  <title>City - HjerteRom</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylsheet" href="components.css">
+
 </head>
+
 <body>
+  <main class="iphone">
+    <header class="header" id="header"></header>
+
+    <section class="picture-hero">
+
+      <div class="hero-overlay"> 
+        <h1 id="selectedAreaTitle"></h1>
+      </div>
+
+    </section>
+
+    <section class="map-search-section">
+      <h2>Kart over <span = id="mapAreaName"></span></h2>
+      
+      <div class="map-search-row">
+
+        <input id="mapSearch" type="text" placeholder="SØK">
+
+        <button class="filter-btn" id="filterBtn"></button>
+
+      </div>
+    </section>
+
+    
+    <section class="map-section">
+
+      <div class="map-container" id="mapContainer">
+      </div>
+
+    </section>
+
+  </main>
+
+
 
 </body>
 </html>
